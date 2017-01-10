@@ -1,14 +1,7 @@
-/**
- * Created by Keith on 2017/1/9.
- */
+//import {changeColor as run} from "./sample1.js";
+//run();
 
-let traffic = document.getElementById("traffic");
-let classes = ["stop","wait","pass"];
-let index = 0;
+import {TrafficLight} from "./sample2.js";
 
-function changeColor(){
-    traffic.className = classes[index++%classes.length];
-    setTimeout(changeColor,2000);
-}
-
-changeColor();
+const tl = new TrafficLight();
+tl.run();
