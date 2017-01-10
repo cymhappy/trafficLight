@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css">
+        #traffic > li{
+            display: block;
+        }
+
+        #traffic span{
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: gray;
+            margin: 5px;
+            border-radius: 50%;//圆角边框
+        }
+        /*nth-child 第几个子元素*/
+        #traffic.stop li:nth-child(1) span{
+            background-color: #a00;
+        }
+
+        #traffic.wait li:nth-child(2) span{
+            background-color: #aa0;
+        }
+
+        #traffic.pass li:nth-child(3) span{
+            background-color: #0a0;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <title>红绿灯</title>
+
+</head>
+<body>
+    <ul id="traffic" class="stop">
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ul>
+</body>
+<script type="text/javascript" src="script/main.js"></script>
+</html>
