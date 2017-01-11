@@ -1,7 +1,7 @@
 module.exports = {
     entry:__dirname+"/script/main.js"
     ,output:{
-        filename:"main.js"
+        filename:"main.bundle.js"
         ,path:__dirname+"/public"
     }
     ,module:{
