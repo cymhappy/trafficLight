@@ -33,7 +33,7 @@ class TrafficLight{
 
     run(){
         if(this.running){
-            console.warn("traffic light is runing")
+            console.warn("traffic light is runing");
             return;
         }
 
