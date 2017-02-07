@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>evnet</title>
+    <style type="text/css">
+
+        div#parent{
+            position:relative;
+            width: 150px;
+            height: 150px;
+            background: blueviolet;
+        }
+        div#child {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background: cadetblue;
+            margin:-50px 0 0 -50px;
+            left:50%;
+            top:50%;
+
+        }
+        div#grandson {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: chocolate;
+            margin: -25px 0 0 -25px;
+            left:50%;
+            top:50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        <div id="child">
+            <div id="grandson" onclick="onGrandsonClick()"></div>
+        </div>
+    </div>
+<script type="text/javascript">
+    var child = document.getElementById("child");
+    var parent = document.getElementById("parent");
+    var grandson = document.getElementById("grandson");
+
+
+//    if(grandson.attachEvent){//IE
+//        grandson.attachEvent("onclick",onGrandsonClick);
+//        child.attachEvent("onclick",onChildClick);
+//        parent.attachEvent("onclick",onParentClick);
+//    }
+//    else{//W3C
+//
+//
+//        grandson.addEventListener("click",onGrandsonClick);
+//        child.addEventListener("click",onChildClick);
+//        parent.addEventListener("click",onParentClick);
+//
+//    }
+
+//    grandson.onclick = function(e){
+//        console.log("grandson.onclick",e)
+//    };
+
+
+
+
+    //grandson.addEventListener("click",onGrandsonClick);
+
+    function onGrandsonClick(e){
+        //console.log(e);
+        console.log("onGrandsonClick",event.srcElement.id,event);
+        console.log(this===window,this.id);
+        console.log(e);
+    }
+    function onChildClick(e){
+        console.log("onChildClick",event.srcElement.id,event);
+        console.log(this===window,this.id);
+    }
+    function onParentClick(e){
+        console.log("onParentClick",event.srcElement.id,event);
+        console.log(this===window,this.id);
+    }
+
+</script>
+</body>
+</html>
